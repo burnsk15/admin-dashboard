@@ -1,3 +1,77 @@
-h2 {
-    background-color: red;
+html, body {
+    /*Set max height for the page*/
+    height: 100%;
 }
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr min(100%);
+    margin: 0;
+}
+
+.sidebar {
+    background-color: #1B4543;
+    color: white;
+    /*Set the grid postion of the sidebar to stay to the left and take up the whole verticle space*/
+    grid-column: 1/2;
+    grid-row: 1/3; 
+    padding: 30px;
+
+}
+
+h1 {
+    display: flex; /*Use Flexbox to keep items in a row and in the middle*/
+    align-items: center;
+    justify-content: start;
+    padding-bottom: 30px;
+}  
+
+/*Set the logo SVG to be bigger than the SVGs below it*/
+.logo svg {
+    width: 50px;
+}
+
+.navigation {
+    display: grid;
+    gap: 60px;
+}
+
+ul {
+    display: grid;
+    padding: 0;/*remove built in padding and margin*/
+    margin: 0;
+    gap: 10px;
+    }
+
+/*Set the dashboard logo to white to match the text*/
+svg {
+    fill: white;
+    width: 30px;
+    padding: 0px 15px;
+}
+li {
+    /*Use Flexbox to keep items close together and to center the text with the SVG*/
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    align-items: center;
+}
+
+/*Set the navigation SVG to line up with the logo above*/
+.navigation svg {
+    padding:0px 25px;
+}
+
+header {
+    background-color: #FAF9F6;
+    grid-column: 2/5;
+}
+
+.main-content {
+    background-color: #ECECEC;
+    grid-column: 2/5;
+    grid-row: 2/3;
+}
+
